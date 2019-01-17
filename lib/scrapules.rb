@@ -63,7 +63,7 @@ def get_scrapules_infos(urls)
 
  end
 
- puts fusion.inspect
+ puts fusion
  return fusion
 end
 ######

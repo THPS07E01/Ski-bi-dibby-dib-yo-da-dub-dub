@@ -39,7 +39,7 @@ def get_townhall_email(urls)
   #On récupère les infos.
   urls.each do |url|
     
-    page = Nokogiri::HTML(open(PAGE_URL2+url))     # On combine l'url de base et les url de chaque commune.
+    page = Nokogiri::HTML(open(PAGE_URL2+url))   # On combine l'url de base et les url de chaque commune.
     emails_path = page.xpath('/html/body/div/main/section[2]/div/table/tbody/tr[4]/td[2]')
     name_path = page.css('small')
     city_name_temp = name_path.text    # On récupère les noms.
