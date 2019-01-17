@@ -8,7 +8,7 @@ Pour commencer nous t'invitons à cliquer sur ce lien histoire de te mettre dans
 
 ## RECUPÈRE
 
-Ensuite il faut que tu récupère tranquillement les données de notre super repo ici :
+Ensuite il faut que tu récupères tranquillement les données de notre super repo ici :
 
  En *HTTPS* par ici :
 
