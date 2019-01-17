@@ -38,7 +38,7 @@ def get_scrapules_infos(urls)
 
 	#On récupère les infos.
 	urls.each do |url|
-		page = Nokogiri::HTML(open(PAGE_URL2+url))
+		page = Nokogiri::HTML(open(PAGE_URL2+url)) # On combine l'url de base et celle de chaque député.
 		name_path = page.xpath('/html/body/div[3]/div/div/div/section[1]/div/article/div[2]/h1')
 		email_path = page.xpath('//a[@class="email"]')
 		b = email_path[0]['href']        # On récuppère le href

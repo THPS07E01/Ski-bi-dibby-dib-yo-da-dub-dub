@@ -32,7 +32,7 @@ def crypto_scrapper
     fusion[i] = { name => values[i] }
   end
 
-  puts fusion
+  puts fusion                                                #On puts et on return, pour toi et pour rspec :)
   return fusion
 
 end
