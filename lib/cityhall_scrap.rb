@@ -44,16 +44,14 @@ def get_townhall_email(urls)
 
   city_name.each_with_index do |name, i|   
     
-    if city_mail[i].length < 1
-       city_mail[i] = "Adresse e-mail non renseignée. Ces bouseux n'ont sûrement pas Internet de toute façon!"
-       fusion[i] = { name => city_mail[i] }
-    else 
-       fusion[i] = { name => city_mail[i] }
-    end
-  
+    empty_mail = "Adresse e-mail non renseignée. Ces bouseux n'ont sûrement pas Internet de toute façon!"
+    
+    city_mail[i].length < 1 ? city_mail[i] = empty_mail : nil
+    fusion[i] = { name => city_mail[i] }
   end
   
   puts fusion
+  return fusion.inspect
 
 end
 

@@ -1,6 +1,7 @@
 #######################################################################################################################
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^   REQUIERED   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^#
 
+require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
 require 'pry'
@@ -31,6 +32,7 @@ def crypto_scrapper
     fusion[i] = { name => values[i] }
   end
 
+  puts fusion
   return fusion
 
 end
