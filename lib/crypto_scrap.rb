@@ -1,7 +1,13 @@
+#######################################################################################################################
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^   REQUIERED   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^#
+
 require 'nokogiri'
 require 'open-uri'
 require 'pry'
 
+
+#######################################################################################################################
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^   METHOD   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^#
 
 def crypto_scrapper
 
@@ -12,11 +18,11 @@ def crypto_scrapper
   values = []                                                # On défini les deux arrays vides qui nous serviront plus tard.
   crypto_names = []
 
-  passvalues.each do |value|                                 # On prend les valeurs une par une , on les converti en texte, enlève le signe "$" et converti en float et met dans l'array values
+  pathvalues.each do |value|                                 # On prend les valeurs une par une , on les converti en texte, enlève le signe "$" et converti en float et met dans l'array values
     values << value.text.delete('$').to_f
   end
 
-  passcrypto_names.each do |crypto|                          # On prend les noms un par un, on les converti en texte et on les met dans l'array crypto_names
+  pathcrypto_names.each do |crypto|                          # On prend les noms un par un, on les converti en texte et on les met dans l'array crypto_names
     crypto_names << crypto.text
   end
 
@@ -25,6 +31,13 @@ def crypto_scrapper
     fusion[i] = { name => values[i] }
   end
 
-  puts fusion.inspect
+  return fusion
 
 end
+
+#######################################################################################################################
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^   INITIALIZE   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^#
+
+                                              crypto_scrapper
+
+#######################################################################################################################
