@@ -43,6 +43,7 @@ def get_scrapules_infos(urls)
 		email_path = page.xpath('//a[@class="email"]')
 		b = email_path[0]['href']        # On récuppère le href
 		b[0..6] = ''                     # On enlève le "mailto:"
+		puts b                           # Un petit puts pour qu'on voie ce qui se passe vu que c'est long...
 		scrapules_mails << b
 		scrapules_names << name_path.text
  end
@@ -63,7 +64,7 @@ def get_scrapules_infos(urls)
  end
 
  puts fusion.inspect
-
+ return fusion
 end
 ######
 #######################################################################################################################
